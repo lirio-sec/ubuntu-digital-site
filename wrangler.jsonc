@@ -1,1 +1,8 @@
 
+{
+  "name": "ubuntu-digital-site",
+  "compatibility_date": "2026-10-20",
+  "assets": {
+    "directory": "./public"
+  }
+}
