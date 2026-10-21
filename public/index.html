@@ -3,216 +3,280 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0b100e">
-<title>Ubuntu Digital — A tecnologia que conecta</title>
-<meta name="description" content="Websites, lojas online e sistemas à medida para empresas angolanas. Peça a sua proposta.">
+<meta name="theme-color" content="#0f0f0f">
+<title>Ubuntu Digital — Tecnologia que conecta pessoas</title>
+<meta name="description" content="Websites, lojas online e sistemas à medida para empresas angolanas. Tecnologia que conecta pessoas e impulsiona negócios.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Ubuntu Digital — A tecnologia que conecta">
+<meta property="og:title" content="Ubuntu Digital — Tecnologia que conecta pessoas">
 <meta property="og:description" content="Websites, lojas online e sistemas à medida para empresas angolanas.">
 <meta property="og:locale" content="pt_AO">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M13 7v31c0 13 8 20 20 20s20-8 20-21V22H40v15c0 7-2 11-7 11s-8-4-8-11V14L13 7Z' fill='%23ff7900'/><circle cx='44' cy='9' r='7' fill='%23f6c23e'/></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M13 7v31c0 13 8 20 20 20s20-8 20-21V22H40v15c0 7-2 11-7 11s-8-4-8-11V14L13 7Z' fill='%23ff7a00'/><circle cx='44' cy='9' r='7' fill='%23f6c23e'/></svg>">
+<script>document.documentElement.className+=" js";</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#0b100e;--green:#102d24;--green-2:#1f4d3a;--cream:#f7f3e8;--paper:#fffdf7;--white:#fffdf7;
-  --orange:#ff7900;--gold:#f6c23e;--text:#182820;--line:rgba(255,255,255,.13);--max:1180px;
+  --ink:#0f0f0f;--green:#1b3d2f;--green-deep:#12291f;--cream:#ede7dd;--paper:#f5f1e9;--white:#f4efe6;
+  --orange:#ff7a00;--gold:#f6c23e;--text:#1a231e;--muted:#55625a;--line:rgba(255,255,255,.13);--max:1180px;
+  --font-title:Montserrat,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --font-body:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  /* Motivos geométricos de inspiração africana (SVG embutido, monocromático e discreto) */
+  --tile-band:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='10' viewBox='0 0 20 10'%3E%3Cpath d='M0 10L5 2l5 8zM10 10l5-8 5 8z' fill='%23f6c23e' fill-opacity='.5'/%3E%3C/svg%3E");
+  --tile-lattice:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath d='M24 3L45 24 24 45 3 24z' fill='none' stroke='%23ff7a00' stroke-opacity='.4' stroke-width='1.2'/%3E%3Cpath d='M24 14L34 24 24 34 14 24z' fill='%23ff7a00' fill-opacity='.12'/%3E%3Ccircle cx='24' cy='24' r='1.8' fill='%23f6c23e' fill-opacity='.5'/%3E%3C/svg%3E");
+  --tile-sona:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%231b3d2f' stroke-opacity='.05' stroke-width='1.2'%3E%3Cpath d='M24 4C35 4 44 13 44 24S35 44 24 44 4 35 4 24 13 4 24 4z'/%3E%3Cpath d='M24 12L36 24 24 36 12 24z'/%3E%3C/g%3E%3Cg fill='%231b3d2f' fill-opacity='.1'%3E%3Ccircle cx='24' cy='4' r='1.6'/%3E%3Ccircle cx='44' cy='24' r='1.6'/%3E%3Ccircle cx='24' cy='44' r='1.6'/%3E%3Ccircle cx='4' cy='24' r='1.6'/%3E%3Ccircle cx='24' cy='24' r='2'/%3E%3C/g%3E%3C/svg%3E");
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+body{font-family:var(--font-body);background:var(--cream);color:var(--text);line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.brand{font-family:var(--font-title)}
 a{color:inherit;cursor:pointer}
 button,a{-webkit-tap-highlight-color:transparent}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+section[id]{scroll-margin-top:68px}
 .container{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
-.eyebrow{font-size:.75rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--orange)}
-.section{padding:78px 0}
-.section-heading{max-width:600px;margin-bottom:30px}
-.section-heading h2{font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.08;letter-spacing:-.04em;margin:8px 0 12px;color:var(--green)}
-.section-heading p{color:#536159;max-width:58ch}
+.ico{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.eyebrow{display:inline-flex;align-items:center;font-family:var(--font-title);font-size:.72rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--orange)}
+.eyebrow:before{content:"";width:26px;height:1px;background:currentColor;margin-right:12px;opacity:.8}
+.section{padding:96px 0}
+.section-heading{max-width:620px;margin-bottom:40px}
+.section-heading h2{font-size:clamp(1.65rem,2.8vw,2.35rem);line-height:1.18;letter-spacing:-.025em;font-weight:700;margin:12px 0 14px;color:var(--green)}
+.section-heading p{color:var(--muted);max-width:56ch}
 .pattern{position:relative;isolation:isolate;overflow:hidden}
-.pattern:after{content:"";position:absolute;z-index:-1;right:-20px;top:-18px;width:118px;height:118px;opacity:.17;background-image:
-linear-gradient(45deg,transparent 42%,var(--orange) 43% 48%,transparent 49%),
-linear-gradient(-45deg,transparent 42%,var(--orange) 43% 48%,transparent 49%),
-linear-gradient(0deg,transparent 44%,var(--orange) 45% 50%,transparent 51%);
-background-size:28px 28px;pointer-events:none}
+.pattern:after{content:"";position:absolute;z-index:-1;right:-14px;top:-14px;width:160px;height:160px;opacity:.5;background:var(--tile-lattice) 0 0/48px 48px;-webkit-mask-image:linear-gradient(225deg,#000,transparent 72%);mask-image:linear-gradient(225deg,#000,transparent 72%);pointer-events:none}
+
+/* Animações */
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes drift{to{background-position:96px 96px}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
 
 /* Cabeçalho */
-header{position:absolute;z-index:5;left:0;right:0;top:0;color:var(--white);border-bottom:1px solid rgba(255,255,255,.12)}
-.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:850;letter-spacing:-.04em;font-size:1.35rem;line-height:1}
-.brand-mark{width:42px;height:42px;display:grid;place-items:center;flex:none}
+header{position:fixed;z-index:20;left:0;right:0;top:0;color:var(--white);border-bottom:1px solid rgba(255,255,255,.1);transition:background .35s,border-color .35s}
+header.scrolled{background:rgba(11,11,11,.86);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom-color:rgba(246,194,62,.18)}
+.nav{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px;transition:min-height .3s}
+header.scrolled .nav{min-height:64px}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;letter-spacing:-.03em;font-size:1.5rem;line-height:1;color:var(--white)}
+.brand-mark{width:40px;height:40px;display:grid;place-items:center;flex:none}
 .brand-mark svg{width:100%;height:100%}
-.brand-name span{display:block;font-size:.57rem;letter-spacing:.38em;color:var(--orange);font-weight:800;margin-top:5px}
-.nav-links{display:flex;align-items:center;gap:26px}
-.nav-links a{text-decoration:none;color:#e5e9e5;font-size:.88rem;font-weight:600;transition:color .2s}
-.nav-links a:hover{color:var(--gold)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 21px;border-radius:999px;text-decoration:none;font-weight:800;font-size:.9rem;border:1px solid transparent;transition:transform .2s,background .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn-orange{background:var(--orange);color:#17130d;box-shadow:0 8px 24px rgba(255,121,0,.17)}
-.btn-outline{border-color:rgba(255,121,0,.75);color:var(--white);background:rgba(0,0,0,.16)}
-.menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;border-radius:10px;padding:9px 12px;font-size:1.15rem}
+.brand-name span{display:block;font-size:.55rem;letter-spacing:.42em;color:var(--gold);font-weight:600;margin-top:5px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{position:relative;text-decoration:none;color:#e0dcd3;font-size:.84rem;font-weight:500;letter-spacing:.02em;padding:6px 0;transition:color .25s}
+.nav-links a:after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover:after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 26px;border-radius:8px;text-decoration:none;font-family:var(--font-title);font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;border:1px solid transparent;transition:background .3s,border-color .3s,box-shadow .3s}
+.btn .arr{display:inline-block;transition:transform .35s var(--ease)}
+.btn:hover .arr{transform:translateX(5px)}
+.btn-orange{background:var(--orange);color:#120c04}
+.btn-orange:hover{background:#ff8d26;box-shadow:0 10px 30px rgba(255,122,0,.28)}
+.btn-outline{border-color:rgba(244,239,230,.3);color:var(--white);background:transparent}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:white;border-radius:8px;padding:8px 12px;font-size:1.1rem}
 
-/* Hero */
-.hero{min-height:660px;padding:145px 0 60px;background:
-radial-gradient(ellipse at 76% 45%,rgba(255,121,0,.15),transparent 34%),
-linear-gradient(105deg,#090d0b 0%,#0b1510 56%,#14281f 100%);color:var(--white);position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;right:0;top:100px;bottom:0;width:11px;background:repeating-linear-gradient(135deg,var(--orange) 0 7px,transparent 7px 15px)}
-.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:42px;align-items:center}
+/* Apresentação */
+.hero{min-height:720px;padding:150px 0 90px;background:
+radial-gradient(ellipse at 80% 28%,rgba(255,122,0,.10),transparent 42%),
+linear-gradient(110deg,#0a0a0a 0%,#0f0f0f 52%,#12281f 100%);color:var(--white);position:relative;overflow:hidden;display:flex;align-items:center}
+.hero.pattern:after{width:60%;height:100%;right:0;top:0;opacity:.55;background:var(--tile-lattice) 0 0/48px 48px;-webkit-mask-image:linear-gradient(270deg,#000,transparent 80%);mask-image:linear-gradient(270deg,#000,transparent 80%);animation:drift 90s linear infinite}
+.hero .container{width:min(var(--max),calc(100% - 40px))}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
 .hero-copy{position:relative;z-index:1}
-.hero h1{font-size:clamp(2.5rem,5vw,4.5rem);line-height:.99;letter-spacing:-.055em;max-width:650px;margin:14px 0 20px}
+.hero-copy>*{animation:rise 1s var(--ease) both}
+.hero-copy>:nth-child(1){animation-delay:.1s}
+.hero-copy>:nth-child(2){animation-delay:.25s}
+.hero-copy>:nth-child(3){animation-delay:.4s}
+.hero-copy>:nth-child(4){animation-delay:.55s}
+.hero h1{font-size:clamp(2.1rem,4.2vw,3.55rem);line-height:1.08;letter-spacing:-.035em;font-weight:700;max-width:620px;margin:20px 0 22px}
 .hero h1 em{font-style:normal;color:var(--orange)}
-.hero-copy>p{font-size:1.08rem;color:#cbd4cd;max-width:520px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 30px}
-.hero-points{display:flex;gap:20px;flex-wrap:wrap;color:#dbe2dc;font-size:.78rem}
-.hero-points span{display:flex;align-items:center;gap:7px}
-.hero-points b{color:var(--orange);font-size:1rem}
-.hero-art{min-height:350px;position:relative;display:grid;place-items:center}
-.glow{position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:rgba(255,121,0,.12);filter:blur(45px)}
-.device{position:relative;width:min(100%,520px);padding:13px;border:1px solid rgba(255,255,255,.24);border-radius:20px;background:linear-gradient(145deg,#29332d,#070908 70%);box-shadow:0 35px 70px rgba(0,0,0,.45);transform:rotate(-2deg)}
-.device-screen{min-height:290px;border-radius:11px;overflow:hidden;padding:24px;background:
-linear-gradient(135deg,rgba(11,16,14,.94),rgba(16,45,36,.89)),
-repeating-linear-gradient(45deg,transparent 0 20px,rgba(255,121,0,.15) 20px 22px)}
-.screen-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:14px}
-.screen-top .brand{font-size:1rem}.screen-top .brand-mark{width:28px;height:28px}
-.screen-pill{font-size:.68rem;color:var(--gold);border:1px solid rgba(246,194,62,.45);border-radius:30px;padding:5px 9px}
-.screen-main{padding:28px 4px 5px;max-width:370px}
-.screen-main small{color:var(--orange);letter-spacing:.17em;font-weight:800}
-.screen-main h3{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.05;color:var(--white);letter-spacing:-.04em;margin:10px 0}
-.screen-main h3 span{color:var(--orange)}
-.screen-main p{color:#c2cdc5;font-size:.82rem;max-width:280px}
-.screen-lines{display:flex;gap:7px;margin-top:22px}
-.screen-lines i{height:5px;width:48px;background:var(--orange);border-radius:5px}
-.screen-lines i:nth-child(2){width:28px;background:var(--gold)}
-.screen-lines i:nth-child(3){width:18px;background:#52685b}
-.floating-tag{position:absolute;right:-5px;bottom:10px;background:var(--orange);color:#17130d;padding:15px 17px;border-radius:12px;font-weight:850;font-size:.8rem;box-shadow:0 12px 30px #0005;transform:rotate(3deg)}
+.hero-copy>p{font-size:1.04rem;color:#c5ccc5;max-width:500px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.hero-art{position:relative}
+.watermark{position:absolute;right:-70px;bottom:-90px;width:420px;height:420px;opacity:.06;pointer-events:none;animation:fade 2s .6s both}
+.panel{position:relative;z-index:1;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.015));-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);padding:4px 30px 0;overflow:hidden;animation:rise 1.1s .5s var(--ease) both}
+.panel-head{display:flex;justify-content:space-between;gap:12px;padding:20px 0 18px;border-bottom:1px solid rgba(255,255,255,.12);font-family:var(--font-title);font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+.panel-list{list-style:none}
+.panel-list li{display:grid;grid-template-columns:46px 1fr;gap:8px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.1);animation:rise .9s var(--ease) both}
+.panel-list li:nth-child(1){animation-delay:.8s}
+.panel-list li:nth-child(2){animation-delay:.95s}
+.panel-list li:nth-child(3){animation-delay:1.1s}
+.panel-list li:nth-child(4){animation-delay:1.25s}
+.panel-list .n{font-family:var(--font-title);font-weight:600;color:var(--orange);font-size:.78rem;letter-spacing:.12em;padding-top:4px}
+.panel-list b{display:block;font-family:var(--font-title);font-weight:600;font-size:1.04rem;color:var(--white);margin-bottom:2px}
+.panel-list p{font-size:.86rem;color:#aeb8b0}
+.panel-foot{padding:18px 0 20px;font-family:var(--font-title);font-size:.66rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#98a49b}
+.panel:after{content:"";display:block;height:10px;margin:0 -30px;background:var(--tile-band) repeat-x 0 0/20px 10px}
 
 /* Faixa de setores */
-.strip{background:var(--green);color:var(--white);padding:22px 0;border-top:1px solid var(--line)}
-.strip-inner{display:flex;align-items:center;gap:14px 26px;flex-wrap:wrap}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chips span{font-size:.8rem;color:#dbe2dc;border:1px solid var(--line);border-radius:999px;padding:6px 13px}
+.band{height:10px;background:var(--ink) var(--tile-band) repeat-x 0 0/20px 10px}
+.strip{background:var(--green);color:var(--white);padding:26px 0}
+.strip-inner{display:flex;align-items:center;gap:14px 34px;flex-wrap:wrap}
+.sectors{display:flex;flex-wrap:wrap;gap:8px 0;list-style:none}
+.sectors li{font-size:.86rem;color:#dfe4dc;letter-spacing:.02em}
+.sectors li+li:before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.7;margin:0 16px;vertical-align:middle}
 
 /* Serviços */
 .services{background:var(--cream)}
-.services-layout{display:grid;grid-template-columns:.8fr 1.5fr;gap:42px;align-items:start}
-.services-layout .section-heading{position:sticky;top:24px;margin-bottom:0}
-.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.service-card{background:var(--green);color:var(--white);padding:24px;border-radius:15px;min-height:215px;border:1px solid rgba(16,45,36,.08);transition:transform .2s,box-shadow .2s}
-.service-card:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(16,45,36,.13)}
-.service-icon{width:42px;height:42px;display:grid;place-items:center;color:var(--orange);border:1px solid rgba(255,121,0,.4);border-radius:12px;margin-bottom:20px;font-size:1.3rem;font-weight:800}
-.service-card h3{font-size:1.08rem;color:white;margin-bottom:8px}
-.service-card p{font-size:.9rem;color:#c6d2ca;margin-bottom:17px}
-.text-link{display:inline-flex;gap:7px;align-items:center;color:var(--orange);font-size:.84rem;font-weight:800;text-decoration:none}
+.services-layout{display:grid;grid-template-columns:.8fr 1.5fr;gap:56px;align-items:start}
+.services-layout .section-heading{position:sticky;top:96px;margin-bottom:0}
+.service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.service-card{background:linear-gradient(160deg,#1f4636,var(--green) 55%,var(--green-deep));color:var(--white);padding:30px 28px 34px;border-radius:12px;min-height:250px;border:1px solid rgba(246,194,62,.14);transition:border-color .4s,box-shadow .4s}
+.service-card:before{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--orange);transition:width .7s var(--ease);z-index:1}
+.service-card:hover{border-color:rgba(255,122,0,.4);box-shadow:0 22px 44px rgba(18,41,31,.22)}
+.service-card:hover:before{width:100%}
+.service-card .ico{width:30px;height:30px;color:var(--orange);margin-bottom:26px}
+.service-card .idx{position:absolute;top:26px;right:28px;font-family:var(--font-title);font-size:.68rem;font-weight:600;letter-spacing:.18em;color:rgba(246,194,62,.75)}
+.service-card h3{font-size:1.08rem;font-weight:600;color:white;margin-bottom:10px}
+.service-card p{font-size:.9rem;color:#c3cec6;margin-bottom:22px}
+.text-link{display:inline-flex;gap:8px;align-items:center;color:var(--orange);font-family:var(--font-title);font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;transition:color .25s}
+.text-link .arr{display:inline-block;transition:transform .35s var(--ease)}
 .text-link:hover{color:var(--gold)}
+.text-link:hover .arr{transform:translateX(5px)}
 
-/* Incluído em todos os projetos */
-.benefits{background:var(--paper)}
-.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.benefit{background:var(--cream);border-radius:15px;padding:22px;border:1px solid #e6e2d2}
-.benefit .service-icon{margin-bottom:0;color:#c85f00;border-color:rgba(200,95,0,.35)}
-.benefit b{display:block;color:var(--green);font-size:1rem;margin:14px 0 5px}
-.benefit p{font-size:.88rem;color:#58645c}
+/* Em todos os projetos */
+.benefits{background:var(--paper) var(--tile-sona)}
+.benefit-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 44px}
+.benefit{padding:30px 0;border-top:1px solid rgba(27,61,47,.2);display:grid;grid-template-columns:34px 1fr;gap:18px}
+.benefit .ico{width:28px;height:28px;color:#c25f00}
+.benefit .kz{font:600 1rem var(--font-title);color:#c25f00;line-height:28px}
+.benefit b{display:block;font-family:var(--font-title);font-weight:600;color:var(--green);font-size:1rem;margin-bottom:5px}
+.benefit p{font-size:.9rem;color:var(--muted)}
 
 /* Processo */
-.process{background:var(--cream)}
-.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:34px}
-.step{border-top:2px solid #d7d9cc;padding-top:18px}
-.step-number{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--green);color:var(--gold);font-weight:850;margin-bottom:17px}
-.step h3{font-size:1.03rem;color:var(--green);margin-bottom:7px}
-.step p{font-size:.88rem;color:#58645c}
+.process{background:var(--cream) var(--tile-sona)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.step{position:relative;padding-top:26px;border-top:1px solid rgba(27,61,47,.22)}
+.step:before{content:"";position:absolute;top:-1px;left:0;width:48px;height:2px;background:var(--orange)}
+.step-number{font-family:var(--font-title);font-weight:600;font-size:.78rem;letter-spacing:.22em;color:#c25f00;margin-bottom:16px}
+.step h3{font-size:1.04rem;font-weight:600;color:var(--green);margin-bottom:8px}
+.step p{font-size:.9rem;color:var(--muted)}
 
 /* Sobre */
 .about{background:var(--ink);color:var(--white);padding:0}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;min-height:390px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;min-height:430px}
 .about-visual{background:
-linear-gradient(135deg,rgba(11,16,14,.2),rgba(11,16,14,.9)),
-repeating-linear-gradient(45deg,transparent 0 32px,rgba(255,121,0,.2) 32px 34px),
-linear-gradient(135deg,#254a39,#101713);display:flex;align-items:end;padding:42px;position:relative;overflow:hidden}
-.about-visual:before{content:"U";position:absolute;font-size:23rem;font-weight:900;line-height:1;color:rgba(255,121,0,.1);right:10px;top:-38px}
-.about-visual blockquote{position:relative;font-size:clamp(1.7rem,3vw,2.5rem);font-weight:850;line-height:1.08;letter-spacing:-.04em;max-width:390px}
+linear-gradient(135deg,rgba(15,15,15,.2),rgba(15,15,15,.9)),
+var(--tile-lattice) 0 0/72px 72px,
+linear-gradient(135deg,#27503d,#101713);display:flex;align-items:end;padding:48px;position:relative;overflow:hidden}
+.about-visual:before{content:"U";position:absolute;font-family:var(--font-title);font-size:23rem;font-weight:700;line-height:1;color:rgba(255,122,0,.08);right:10px;top:-38px}
+.about-visual blockquote{position:relative;font-family:var(--font-title);font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:600;line-height:1.18;letter-spacing:-.025em;max-width:390px}
 .about-visual blockquote span{color:var(--orange)}
-.about-copy{padding:58px clamp(24px,5vw,70px);align-self:center}
-.about-copy h2{font-size:clamp(1.8rem,3vw,2.6rem);line-height:1.08;letter-spacing:-.04em;margin:9px 0 17px;color:white}
+.about-copy{padding:64px clamp(24px,5vw,72px);align-self:center}
+.about-copy h2{font-size:clamp(1.6rem,2.8vw,2.2rem);line-height:1.18;letter-spacing:-.025em;font-weight:700;margin:12px 0 18px;color:white}
 .about-copy h2 span{color:var(--orange)}
-.about-copy p{color:#c0cbc3}
-.values{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:28px}
-.value{border-top:1px solid rgba(255,255,255,.18);padding-top:12px}
-.value b{display:block;color:var(--gold);font-size:.9rem;margin-bottom:3px}
-.value span{font-size:.8rem;color:#c0cbc3}
+.about-copy p{color:#bcc6be}
+.values{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 24px;margin-top:32px}
+.value{border-top:1px solid rgba(255,255,255,.16);padding-top:14px}
+.value b{display:block;font-family:var(--font-title);color:var(--gold);font-size:.88rem;font-weight:600;margin-bottom:3px}
+.value span{font-size:.82rem;color:#bcc6be}
 
 /* Perguntas */
-.faq{background:var(--paper)}
-.faq-list{max-width:780px;display:grid;gap:10px}
-details{background:var(--cream);border:1px solid #e6e2d2;border-radius:14px;padding:0 20px}
-summary{cursor:pointer;list-style:none;padding:17px 0;font-weight:750;color:var(--green);display:flex;justify-content:space-between;gap:16px}
+.faq{background:var(--paper) var(--tile-sona)}
+.faq-list{max-width:780px}
+details{border-bottom:1px solid rgba(27,61,47,.2)}
+details:first-child{border-top:1px solid rgba(27,61,47,.2)}
+summary{cursor:pointer;list-style:none;padding:22px 0;font-family:var(--font-title);font-weight:600;font-size:1rem;color:var(--green);display:flex;justify-content:space-between;align-items:center;gap:16px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:#c85f00;font-size:1.3rem;line-height:1}
-details[open] summary::after{content:"–"}
-details p{padding:0 0 17px;color:#58645c;font-size:.92rem}
+summary::after{content:"+";color:#c25f00;font-size:1.5rem;font-weight:400;line-height:1;transition:transform .35s var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 24px;color:var(--muted);font-size:.94rem;max-width:62ch}
 
 /* Contacto */
-.cta{background:var(--green);color:white;padding:44px 0;position:relative;overflow:hidden}
-.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:28px}
-.cta h2{color:white;font-size:clamp(1.5rem,3vw,2.25rem);letter-spacing:-.04em;line-height:1.1;margin:8px 0}
-.cta p{color:#c8d3cb}
-footer{background:#080b09;color:#c0cbc3;padding:27px 0}
-.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:16px 22px;flex-wrap:wrap}
-footer .brand{color:white;font-size:1.1rem}
+.cta{background:var(--green);color:white;padding:56px 0;position:relative;overflow:hidden}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:32px}
+.cta h2{color:white;font-size:clamp(1.5rem,2.8vw,2.1rem);font-weight:700;letter-spacing:-.025em;line-height:1.18;margin:12px 0 8px}
+.cta p{color:#cbd6ce}
+footer{background:#0a0a0a;color:#b6c0b8;padding:34px 0}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:18px 24px;flex-wrap:wrap}
+footer .brand{font-size:1.2rem}
 footer .brand-mark{width:34px;height:34px}
-.footer-links{display:flex;gap:18px;flex-wrap:wrap}
-.footer-links a{font-size:.82rem;text-decoration:none;color:#dbe2dc}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+.footer-links a{font-size:.8rem;text-decoration:none;color:#d6dbd3;letter-spacing:.02em;transition:color .25s}
 .footer-links a:hover{color:var(--gold)}
-.footer-note{font-size:.78rem}
-.wa{position:fixed;z-index:10;right:18px;bottom:18px;display:flex;align-items:center;gap:9px;background:#25d366;color:#062b16;padding:14px 18px;border-radius:999px;text-decoration:none;font-weight:850;box-shadow:0 8px 24px #0003}
-.wa span{font-size:1.1rem}
+.footer-note{font-size:.76rem;line-height:1.6}
+.wa{position:fixed;z-index:30;right:18px;bottom:18px;display:flex;align-items:center;gap:10px;background:rgba(15,15,15,.92);color:var(--white);border:1px solid rgba(246,194,62,.45);padding:12px 20px 12px 14px;border-radius:999px;text-decoration:none;font-family:var(--font-title);font-weight:600;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;box-shadow:0 12px 32px rgba(0,0,0,.35);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:opacity .45s,transform .45s var(--ease),border-color .3s}
+.wa:hover{border-color:var(--gold)}
+.wa .ico{width:20px;height:20px;color:#25d366}
+.js .wa{opacity:0;transform:translateY(14px);pointer-events:none}
+.js .wa.show{opacity:1;transform:none;pointer-events:auto}
 
-@media(max-width:850px){
- .nav-links{gap:14px}.nav-links a{font-size:.8rem}.nav .btn{padding:11px 14px;font-size:.8rem}
- .hero-grid{grid-template-columns:1fr 1fr;gap:20px}.hero{min-height:620px}.device-screen{min-height:260px;padding:18px}
- .services-layout{grid-template-columns:1fr;gap:25px}.services-layout .section-heading{position:static;margin-bottom:0}
- .service-grid{grid-template-columns:repeat(2,1fr)}
- .benefit-grid{grid-template-columns:repeat(2,1fr)}
- .about-grid{grid-template-columns:.8fr 1fr}.about-visual{padding:28px}
+@media(max-width:900px){
+ .nav-links{gap:18px}.nav-links a{font-size:.78rem}.nav .btn{padding:11px 16px;font-size:.72rem}
+ .hero-grid{gap:36px}
+ .services-layout{grid-template-columns:1fr;gap:28px}.services-layout .section-heading{position:static;margin-bottom:0}
+ .benefit-grid{grid-template-columns:repeat(2,1fr);gap:0 32px}
+ .process-grid{grid-template-columns:repeat(2,1fr);gap:36px 28px}
+ .about-grid{grid-template-columns:.8fr 1fr}.about-visual{padding:30px}
 }
-@media(max-width:650px){
+@media(max-width:700px){
  .container{width:min(100% - 32px,var(--max))}
- .nav{min-height:70px}.menu-toggle{display:block}
- .nav-links{display:none;position:absolute;top:69px;left:16px;right:16px;background:#101b15;border:1px solid var(--line);border-radius:14px;padding:18px;flex-direction:column;align-items:stretch;gap:14px}
- .nav-links.open{display:flex}.nav-links a{font-size:.95rem;padding:5px}
+ .nav{min-height:68px}header.scrolled .nav{min-height:60px}.menu-toggle{display:block}
+ .nav-links{display:none;position:absolute;top:66px;left:16px;right:16px;background:#101b15;border:1px solid var(--line);border-radius:12px;padding:18px;flex-direction:column;align-items:stretch;gap:12px}
+ .nav-links.open{display:flex}.nav-links a{font-size:.95rem;padding:7px 4px}.nav-links a:after{display:none}
  .nav>.btn{display:none}
- .hero{padding:118px 0 38px;min-height:auto}.hero-grid{grid-template-columns:1fr;gap:20px}.hero h1{font-size:clamp(2.6rem,12vw,4rem)}
- .hero-copy>p{font-size:1rem}.hero-art{min-height:260px;margin:0 4px 8px}.device{width:100%;transform:none}.device-screen{min-height:230px}.screen-main{padding-top:22px}.floating-tag{right:0;bottom:-4px}
- .hero-points{gap:12px}.hero-points span{font-size:.73rem}
- .section{padding:55px 0}.section-heading{margin-bottom:23px}
- .service-grid,.benefit-grid{grid-template-columns:1fr;gap:12px}.service-card{padding:20px;min-height:0}.service-icon{margin-bottom:15px}
- .about-grid{grid-template-columns:1fr}.about-visual{min-height:250px;padding:28px}.about-visual:before{font-size:17rem}
- .about-copy{padding:38px 22px}.values{gap:13px}
- .process-grid{grid-template-columns:1fr 1fr;gap:25px 16px}
- .cta-inner{align-items:flex-start;flex-direction:column}.cta .btn{width:100%}
+ .hero{padding:116px 0 54px;min-height:auto;display:block}
+ .hero.pattern:after{width:100%;opacity:.4}
+ .hero-grid{grid-template-columns:1fr;gap:40px}
+ .hero h1{font-size:clamp(2rem,9vw,2.7rem)}
+ .hero-copy>p{font-size:1rem}
+ .hero-actions .btn{width:100%}
+ .watermark{width:300px;height:300px;right:-60px;bottom:-60px}
+ .panel{padding:2px 22px 0}.panel:after{margin:0 -22px}
+ .section{padding:64px 0}.section-heading{margin-bottom:28px}
+ .service-grid,.benefit-grid{grid-template-columns:1fr}
+ .service-card{padding:26px 22px 30px;min-height:0}.service-card .idx{right:22px}
+ .sectors{gap:8px 22px}.sectors li+li:before{display:none}
+ .benefit{padding:24px 0}
+ .about-grid{grid-template-columns:1fr}.about-visual{min-height:260px;padding:30px}.about-visual:before{font-size:17rem}
+ .about-copy{padding:44px 22px}
+ .process-grid{gap:32px 18px}
+ .cta{padding:48px 0}.cta-inner{align-items:flex-start;flex-direction:column}.cta .btn{width:100%}
  .footer-inner{align-items:flex-start;flex-direction:column}
- .wa{right:13px;bottom:13px;padding:12px 15px}
+ .wa{right:14px;bottom:14px;padding:11px 16px 11px 12px}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .js .reveal{opacity:1;transform:none}
+ .js .wa{opacity:1;transform:none;pointer-events:auto}
+}
 </style>
 </head>
 <body>
 
-<header>
+<!-- Símbolos reutilizáveis: marca e ícones de linha -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="logoGrad" x1="8" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9a18"/><stop offset="1" stop-color="#ff6500"/></linearGradient>
+    <symbol id="uMark" viewBox="0 0 64 64">
+      <path d="M13 7v31c0 13 8 20 20 20s20-8 20-21V22H40v15c0 7-2 11-7 11s-8-4-8-11V14L13 7Z" fill="url(#logoGrad)"/>
+      <circle cx="44" cy="9" r="7" fill="#f6c23e"/>
+      <g fill="#0f0f0f" opacity=".72"><path d="M13 24l11 6v4l-11-6z"/><path d="M13 34l11 6v4l-11-6z"/><path d="M13 44l11 6v4l-11-6z"/></g>
+    </symbol>
+    <symbol id="i-web" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></symbol>
+    <symbol id="i-shop" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol>
+    <symbol id="i-support" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v5h-5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L5 13h6l-1 9 8-11h-6l1-9z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
+  </defs>
+</svg>
+
+<header id="topo">
   <div class="container nav">
     <a class="brand" href="#inicio" aria-label="Ubuntu Digital, início">
-      <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 64 64" fill="none">
-          <defs><linearGradient id="logoGrad" x1="8" y1="8" x2="56" y2="58"><stop stop-color="#ff9a18"/><stop offset="1" stop-color="#ff6500"/></linearGradient></defs>
-          <path d="M13 7v31c0 13 8 20 20 20s20-8 20-21V22H40v15c0 7-2 11-7 11s-8-4-8-11V14L13 7Z" fill="url(#logoGrad)"/>
-          <circle cx="44" cy="9" r="7" fill="#f6c23e"/>
-          <path d="M14 34l9 7-7 7 8 6-5 5-10-8 6-7-8-6 7-4Z" fill="#0b100e" opacity=".7"/>
-        </svg>
-      </span>
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#uMark"/></svg></span>
       <span class="brand-name">ubuntu<span>DIGITAL</span></span>
     </a>
     <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
       <a href="#servicos">Serviços</a><a href="#processo">Processo</a><a href="#sobre">Sobre</a><a href="#perguntas">Perguntas</a><a href="#contacto">Contacto</a>
     </nav>
-    <a class="btn btn-outline" data-wa="Olá! Gostaria de pedir uma proposta à Ubuntu Digital.">Pedir proposta <span aria-hidden="true">↗</span></a>
+    <a class="btn btn-outline" data-wa="Olá! Gostaria de conversar com a Ubuntu Digital sobre um projeto.">Vamos conversar <span class="arr" aria-hidden="true">→</span></a>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
   </div>
 </header>
@@ -223,101 +287,99 @@ footer .brand-mark{width:34px;height:34px}
 <section class="hero pattern" id="inicio">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <span class="eyebrow">Ideias locais. Soluções globais.</span>
-      <h1>A tecnologia que <em>conecta pessoas</em> e impulsiona negócios.</h1>
-      <p>Criamos websites, lojas online e sistemas à medida para empresas angolanas que querem crescer no digital, com processo claro e proposta por escrito.</p>
+      <span class="eyebrow">Tecnologia que conecta pessoas</span>
+      <h1>Soluções digitais para um futuro <em>mais conectado.</em></h1>
+      <p>Desenvolvemos websites, lojas online e sistemas à medida que aproximam pessoas, fortalecem negócios e impulsionam o crescimento.</p>
       <div class="hero-actions">
-        <a class="btn btn-orange" data-wa="Olá! Quero conversar sobre um projeto digital para a minha empresa.">Pedir proposta <span aria-hidden="true">→</span></a>
-        <a class="btn btn-outline" href="#servicos">Ver serviços</a>
-      </div>
-      <div class="hero-points">
-        <span><b>⌘</b> Websites</span><span><b>◇</b> Lojas online</span><span><b>⌁</b> Sistemas à medida</span>
+        <a class="btn btn-orange" data-wa="Olá! Quero pedir uma proposta para a minha empresa.">Pedir proposta <span class="arr" aria-hidden="true">→</span></a>
+        <a class="btn btn-outline" href="#servicos">Conhecer os serviços</a>
       </div>
     </div>
-    <div class="hero-art" aria-label="Demonstração visual da marca Ubuntu Digital">
-      <div class="glow"></div>
-      <div class="device">
-        <div class="device-screen">
-          <div class="screen-top">
-            <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><path d="M13 7v31c0 13 8 20 20 20s20-8 20-21V22H40v15c0 7-2 11-7 11s-8-4-8-11V14L13 7Z" fill="#ff7900"/><circle cx="44" cy="9" r="7" fill="#f6c23e"/></svg></span><span class="brand-name">ubuntu<span>DIGITAL</span></span></a>
-            <span class="screen-pill">DESENVOLVIMENTO WEB</span>
-          </div>
-          <div class="screen-main">
-            <small>UBUNTU DIGITAL</small>
-            <h3>O seu negócio.<br><span>Mais conectado.</span></h3>
-            <p>Experiências digitais pensadas para aproximar a sua empresa dos seus clientes.</p>
-            <div class="screen-lines"><i></i><i></i><i></i></div>
-          </div>
-        </div>
-      </div>
-      <div class="floating-tag">Tecnologia com propósito ↗</div>
+    <div class="hero-art">
+      <svg class="watermark" viewBox="0 0 64 64" aria-hidden="true"><use href="#uMark"/></svg>
+      <aside class="panel" aria-label="O que construímos">
+        <div class="panel-head"><span>O que construímos</span><span>Luanda · Angola</span></div>
+        <ol class="panel-list">
+          <li><span class="n">01</span><div><b>Websites</b><p>Institucionais e corporativos, claros e rápidos.</p></div></li>
+          <li><span class="n">02</span><div><b>Lojas online</b><p>Catálogo, pedidos e gestão simples.</p></div></li>
+          <li><span class="n">03</span><div><b>Sistemas à medida</b><p>Processos mais organizados e eficientes.</p></div></li>
+          <li><span class="n">04</span><div><b>Consultoria e suporte</b><p>Acompanhamento depois do lançamento.</p></div></li>
+        </ol>
+        <div class="panel-foot">Tradição inspira o futuro</div>
+      </aside>
     </div>
   </div>
 </section>
 
+<div class="band" aria-hidden="true"></div>
+
 <!-- 2. Para quem -->
 <section class="strip" aria-label="Setores">
-  <div class="container strip-inner">
+  <div class="container strip-inner reveal">
     <span class="eyebrow">Pensado para empresas de</span>
-    <div class="chips">
-      <span>Construção</span><span>Energia e petróleo</span><span>Banca e seguros</span><span>Logística</span><span>Saúde</span><span>Educação</span><span>Comércio</span>
-    </div>
+    <ul class="sectors">
+      <li>Construção</li><li>Energia e petróleo</li><li>Banca e seguros</li><li>Logística</li><li>Saúde</li><li>Educação</li><li>Comércio</li>
+    </ul>
   </div>
 </section>
 
 <!-- 3. Serviços -->
 <section class="section services" id="servicos">
   <div class="container services-layout">
-    <div class="section-heading">
+    <div class="section-heading reveal">
       <span class="eyebrow">Os nossos serviços</span>
       <h2>Do site institucional ao sistema à medida.</h2>
       <p>Cada projeto é pensado para a realidade da sua empresa: claro, rápido e feito para gerar contactos.</p>
-      <p style="margin-top:18px"><a class="text-link" href="#contacto">Vamos falar do seu projeto <span>→</span></a></p>
+      <p style="margin-top:22px"><a class="text-link" href="#contacto">Vamos falar do seu projeto <span class="arr">→</span></a></p>
     </div>
     <div class="service-grid">
-      <article class="service-card pattern">
-        <div class="service-icon" aria-hidden="true">▣</div>
-        <h3>Site institucional</h3>
-        <p>Apresente a sua empresa com uma presença online profissional, que transmite confiança.</p>
-        <a class="text-link" data-wa="Olá! Gostaria de uma proposta para um site institucional.">Pedir proposta →</a>
+      <article class="service-card pattern reveal" style="--d:.05s">
+        <span class="idx">01</span>
+        <svg class="ico" aria-hidden="true"><use href="#i-web"/></svg>
+        <h3>Websites</h3>
+        <p>Institucionais e corporativos, com uma presença online profissional que transmite confiança.</p>
+        <a class="text-link" data-wa="Olá! Gostaria de uma proposta para um website.">Pedir proposta <span class="arr">→</span></a>
       </article>
-      <article class="service-card pattern">
-        <div class="service-icon" aria-hidden="true">◇</div>
+      <article class="service-card pattern reveal" style="--d:.15s">
+        <span class="idx">02</span>
+        <svg class="ico" aria-hidden="true"><use href="#i-shop"/></svg>
         <h3>Lojas online</h3>
         <p>Mostre os seus produtos, receba pedidos e facilite a vida a quem quer comprar.</p>
-        <a class="text-link" data-wa="Olá! Gostaria de uma proposta para uma loja online.">Pedir proposta →</a>
+        <a class="text-link" data-wa="Olá! Gostaria de uma proposta para uma loja online.">Pedir proposta <span class="arr">→</span></a>
       </article>
-      <article class="service-card pattern">
-        <div class="service-icon" aria-hidden="true">&lt;/&gt;</div>
-        <h3>Sistemas e aplicações</h3>
+      <article class="service-card pattern reveal" style="--d:.25s">
+        <span class="idx">03</span>
+        <svg class="ico" aria-hidden="true"><use href="#i-code"/></svg>
+        <h3>Aplicações e sistemas</h3>
         <p>Soluções à medida para organizar tarefas e tornar os processos da empresa mais eficientes.</p>
-        <a class="text-link" data-wa="Olá! Gostaria de conversar sobre um sistema ou aplicação à medida.">Pedir proposta →</a>
+        <a class="text-link" data-wa="Olá! Gostaria de conversar sobre uma aplicação ou sistema à medida.">Pedir proposta <span class="arr">→</span></a>
       </article>
-      <article class="service-card pattern">
-        <div class="service-icon" aria-hidden="true">⌁</div>
-        <h3>Manutenção e suporte</h3>
-        <p>Atualizações e apoio contínuo para o seu site estar sempre seguro e a funcionar.</p>
-        <a class="text-link" data-wa="Olá! Gostaria de saber mais sobre manutenção e suporte.">Saber mais →</a>
+      <article class="service-card pattern reveal" style="--d:.35s">
+        <span class="idx">04</span>
+        <svg class="ico" aria-hidden="true"><use href="#i-support"/></svg>
+        <h3>Consultoria e suporte</h3>
+        <p>Orientação digital e acompanhamento contínuo para o seu projeto estar sempre seguro e a funcionar.</p>
+        <a class="text-link" data-wa="Olá! Gostaria de saber mais sobre consultoria e suporte.">Saber mais <span class="arr">→</span></a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- 4. Incluído em todos os projetos -->
+<!-- 4. Em todos os projetos -->
 <section class="section benefits" id="incluido">
   <div class="container">
-    <div class="section-heading">
+    <div class="section-heading reveal">
       <span class="eyebrow">Em todos os projetos</span>
       <h2>Feito a pensar em Angola.</h2>
       <p>Seja qual for o serviço, estes cuidados vêm de base.</p>
     </div>
     <div class="benefit-grid">
-      <div class="benefit"><div class="service-icon" aria-hidden="true">▯</div><b>Pronto para telemóvel</b><p>Páginas pensadas primeiro para o ecrã pequeno, onde muitos dos seus clientes vão abrir o site.</p></div>
-      <div class="benefit"><div class="service-icon" aria-hidden="true">⚡</div><b>Rápido e leve</b><p>Páginas leves, que carregam bem mesmo com internet instável.</p></div>
-      <div class="benefit"><div class="service-icon" aria-hidden="true">◉</div><b>WhatsApp integrado</b><p>Os seus clientes contactam a empresa com um toque, no canal que já usam.</p></div>
-      <div class="benefit"><div class="service-icon" aria-hidden="true">Kz</div><b>Adaptado ao seu mercado</b><p>Português de Angola, preços em kwanzas e conteúdo pensado para o público local.</p></div>
-      <div class="benefit"><div class="service-icon" aria-hidden="true">◈</div><b>Segurança desde o início</b><p>Boas práticas de segurança desde o primeiro dia, com o código versionado e protegido.</p></div>
-      <div class="benefit"><div class="service-icon" aria-hidden="true">✓</div><b>Acompanhamento</b><p>Proposta escrita, prazos claros e apoio depois do lançamento.</p></div>
+      <div class="benefit reveal" style="--d:.0s"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><div><b>Pronto para telemóvel</b><p>Páginas pensadas primeiro para o ecrã pequeno, onde muitos dos seus clientes vão abrir o site.</p></div></div>
+      <div class="benefit reveal" style="--d:.08s"><svg class="ico" aria-hidden="true"><use href="#i-bolt"/></svg><div><b>Rápido e leve</b><p>Páginas leves, que carregam bem mesmo com internet instável.</p></div></div>
+      <div class="benefit reveal" style="--d:.16s"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg><div><b>WhatsApp integrado</b><p>Os seus clientes contactam a empresa com um toque, no canal que já usam.</p></div></div>
+      <div class="benefit reveal" style="--d:.0s"><span class="kz" aria-hidden="true">Kz</span><div><b>Adaptado ao seu mercado</b><p>Português de Angola, preços em kwanzas e conteúdo pensado para o público local.</p></div></div>
+      <div class="benefit reveal" style="--d:.08s"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg><div><b>Segurança desde o início</b><p>Boas práticas de segurança desde o primeiro dia, com o código versionado e protegido.</p></div></div>
+      <div class="benefit reveal" style="--d:.16s"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><div><b>Acompanhamento</b><p>Proposta escrita, prazos claros e apoio depois do lançamento.</p></div></div>
     </div>
   </div>
 </section>
@@ -325,27 +387,29 @@ footer .brand-mark{width:34px;height:34px}
 <!-- 5. Processo -->
 <section class="section process" id="processo">
   <div class="container">
-    <div class="section-heading">
+    <div class="section-heading reveal">
       <span class="eyebrow">Como trabalhamos</span>
       <h2>Um processo claro, do início ao fim.</h2>
       <p>Sabe o que esperar em cada etapa, desde a primeira conversa até ao lançamento.</p>
     </div>
     <div class="process-grid">
-      <article class="step"><div class="step-number">01</div><h3>Diagnóstico</h3><p>Conversamos para compreender a sua empresa, os desafios e os objetivos.</p></article>
-      <article class="step"><div class="step-number">02</div><h3>Proposta</h3><p>Recebe uma proposta escrita com o âmbito, o prazo e o investimento.</p></article>
-      <article class="step"><div class="step-number">03</div><h3>Desenvolvimento</h3><p>Construímos a solução e partilhamos o progresso consigo.</p></article>
-      <article class="step"><div class="step-number">04</div><h3>Lançamento e suporte</h3><p>Publicamos o projeto e explicamos os próximos passos de acompanhamento.</p></article>
+      <article class="step reveal" style="--d:.0s"><div class="step-number">01</div><h3>Diagnóstico</h3><p>Conversamos para compreender a sua empresa, os desafios e os objetivos.</p></article>
+      <article class="step reveal" style="--d:.1s"><div class="step-number">02</div><h3>Proposta</h3><p>Recebe uma proposta escrita com o âmbito, o prazo e o investimento.</p></article>
+      <article class="step reveal" style="--d:.2s"><div class="step-number">03</div><h3>Desenvolvimento</h3><p>Construímos a solução e partilhamos o progresso consigo.</p></article>
+      <article class="step reveal" style="--d:.3s"><div class="step-number">04</div><h3>Lançamento e suporte</h3><p>Publicamos o projeto e explicamos os próximos passos de acompanhamento.</p></article>
     </div>
   </div>
 </section>
+
+<div class="band" aria-hidden="true"></div>
 
 <!-- 6. Porquê Ubuntu -->
 <section class="about" id="sobre">
   <div class="about-grid">
     <div class="about-visual pattern">
-      <blockquote>Tecnologia<br>com <span>propósito.</span></blockquote>
+      <blockquote class="reveal">Tradição inspira<br>o <span>futuro.</span></blockquote>
     </div>
-    <div class="about-copy">
+    <div class="about-copy reveal" style="--d:.1s">
       <span class="eyebrow">Porquê Ubuntu?</span>
       <h2>Mais do que tecnologia, <span>criamos oportunidades.</span></h2>
       <p>"Eu sou porque nós somos." Ubuntu inspira-se na ideia de que crescemos melhor quando construímos em conjunto. Para nós, a tecnologia vale quando aproxima pessoas, resolve problemas reais e ajuda negócios a avançar.</p>
@@ -362,11 +426,11 @@ footer .brand-mark{width:34px;height:34px}
 <!-- 7. Perguntas frequentes -->
 <section class="section faq" id="perguntas">
   <div class="container">
-    <div class="section-heading">
+    <div class="section-heading reveal">
       <span class="eyebrow">Perguntas frequentes</span>
       <h2>Antes de pedir a sua proposta.</h2>
     </div>
-    <div class="faq-list">
+    <div class="faq-list reveal" style="--d:.1s">
       <details><summary>Quanto custa um projeto?</summary><p>Cada projeto é orçamentado à medida, conforme o âmbito e as funcionalidades. Depois de conversarmos, recebe uma proposta escrita com valor e prazo.</p></details>
       <details><summary>Quanto tempo demora?</summary><p>Depende do tamanho do projeto. O prazo vem sempre indicado na proposta, antes de começarmos.</p></details>
       <details><summary>Preciso de ter domínio e alojamento?</summary><p>Ajudamos a escolher e a configurar o domínio e o alojamento. Se já tem, trabalhamos com o que existe.</p></details>
@@ -377,32 +441,36 @@ footer .brand-mark{width:34px;height:34px}
 
 <!-- 8. Contacto -->
 <section class="cta pattern" id="contacto">
-  <div class="container cta-inner">
+  <div class="container cta-inner reveal">
     <div><span class="eyebrow">Vamos construir juntos</span><h2>Vamos pôr o seu projeto em marcha?</h2><p>Conte-nos o que precisa. Respondemos em 24 horas com os próximos passos.</p></div>
-    <a class="btn btn-orange" data-wa="Olá! Quero falar com a Ubuntu Digital sobre um projeto.">Falar pelo WhatsApp <span>→</span></a>
+    <a class="btn btn-orange" data-wa="Olá! Quero falar com a Ubuntu Digital sobre um projeto.">Falar pelo WhatsApp <span class="arr" aria-hidden="true">→</span></a>
   </div>
 </section>
 
 </main>
 
+<div class="band" aria-hidden="true"></div>
+
 <footer>
   <div class="container footer-inner">
-    <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><path d="M13 7v31c0 13 8 20 20 20s20-8 20-21V22H40v15c0 7-2 11-7 11s-8-4-8-11V14L13 7Z" fill="#ff7900"/><circle cx="44" cy="9" r="7" fill="#f6c23e"/></svg></span><span class="brand-name">ubuntu<span>DIGITAL</span></span></a>
+    <a class="brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><use href="#uMark"/></svg></span><span class="brand-name">ubuntu<span>DIGITAL</span></span></a>
     <nav class="footer-links" aria-label="Rodapé"><a href="#servicos">Serviços</a><a href="#processo">Processo</a><a href="#sobre">Sobre</a><a href="#perguntas">Perguntas</a><a href="#contacto">Contacto</a></nav>
-    <div class="footer-note">Luanda, Angola · A tecnologia que conecta.<br>© <span id="year">2026</span> Ubuntu Digital. Todos os direitos reservados.</div>
+    <div class="footer-note">Luanda, Angola · Tecnologia que conecta pessoas e impulsiona negócios.<br>© <span id="year">2026</span> Ubuntu Digital. Todos os direitos reservados.</div>
   </div>
 </footer>
 
-<a class="wa" data-wa="Olá! Vim pelo site da Ubuntu Digital e gostaria de saber mais." aria-label="Contactar a Ubuntu Digital pelo WhatsApp"><span>◉</span> WhatsApp</a>
+<a class="wa" data-wa="Olá! Vim pelo site da Ubuntu Digital e gostaria de saber mais." aria-label="Contactar a Ubuntu Digital pelo WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
 
 <script>
   // Troca só esta linha: o teu número, com 244, sem +, espaços ou traços.
-  const NUMERO = "244XXXXXXXXX";
+  const NUMERO = "244951221248";
   document.querySelectorAll("[data-wa]").forEach(function (link) {
     link.href = "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(link.dataset.wa);
     link.target = "_blank";
     link.rel = "noopener noreferrer";
   });
+
+  // Menu móvel
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
   function fecharMenu() {
@@ -418,6 +486,35 @@ footer .brand-mark{width:34px;height:34px}
     menuToggle.textContent = aberto ? "✕" : "☰";
   });
   navLinks.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", fecharMenu); });
+
+  // Cabeçalho sólido e botão de WhatsApp só depois de algum scroll
+  const header = document.getElementById("topo");
+  const wa = document.querySelector(".wa");
+  let ticking = false;
+  function aoScroll() {
+    const y = window.scrollY || document.documentElement.scrollTop;
+    header.classList.toggle("scrolled", y > 24);
+    wa.classList.toggle("show", y > 360);
+    ticking = false;
+  }
+  window.addEventListener("scroll", function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(aoScroll); }
+  }, { passive: true });
+  aoScroll();
+
+  // Entrada suave das secções ao aparecerem no ecrã
+  const reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  }
+
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 </body>
